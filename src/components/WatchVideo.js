@@ -12,12 +12,11 @@ const WatchVideo = () => {
 
   //console.log(term);
 
-  const dispatch = useDispatch();
+ const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeHambergerMenu());
   }, []);
-  
-    useEffect(() => {
+  useEffect(() => {
     getvideodetails();
   }, []);
 
