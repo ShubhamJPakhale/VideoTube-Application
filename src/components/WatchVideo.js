@@ -15,10 +15,9 @@ const WatchVideo = () => {
  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeHambergerMenu());
-  }, []);
-  useEffect(() => {
     getvideodetails();
-  }, []);
+  }, );
+
 
   const getvideodetails = async () => {
     const videodata = await fetch(
