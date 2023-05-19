@@ -8,17 +8,18 @@ const VideoContainer = () => {
 
   useEffect(() => {
     getvideos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getvideos = async () => {
     const data = await fetch(Youtube_API);
     const jsondata = await data.json();
-    //console.log(jsondata);
-    setYtVideos(jsondata.items);
+    console.log(jsondata);
+    setYtVideos(jsondata?.items);
   };
 
   return (
-    <div className="flex flex-wrap m-4   ">
+    <div className="flex flex-wrap m-4">
       {ytvideos.map((videos) => (
         <Link to={"/watch?v=" + videos.id}>
           <VideoCard videoinfo={videos} key={videos.id} />
