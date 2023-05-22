@@ -19,16 +19,16 @@ const WatchVideo = () => {
   }, []);
 
   return (
-    <div className="ml-12 my-5 flex flex-col w-[760px]">
+    <div className="md:ml-12 md:my-5 flex flex-col w-auto lg:w-[760px]">
       <iframe
-        width="760"
-        height="425"
         src={"https://www.youtube.com/embed/" + term}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
+        className="md:w-[760px] md:h-[425px] w-full h-[300px]"
       ></iframe>
+
       <WatchVideoData videoid={term} />
     </div>
   );

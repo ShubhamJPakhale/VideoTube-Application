@@ -19,7 +19,7 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className="flex flex-wrap m-4">
+    <div className="flex flex-wrap m-3">
       {ytvideos.map((videos) => (
         <Link to={"/watch?v=" + videos.id}>
           <VideoCard videoinfo={videos} key={videos.id} />

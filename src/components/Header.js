@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-white shadow-md shadow-gray-100 flex justify-between">
+    <div className="bg-white shadow-md shadow-gray-100 flex justify-between sm:justify-between ">
       <div className="flex justify-between">
         <img
           onClick={() => toggleMenuHandler()}
@@ -27,7 +27,7 @@ const Header = () => {
       <div>
         <input
           type="text"
-          className="rounded-l-full rounded-bl-full w-[150px] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:[600px] h-[32px] border-r-0 focus:border-gray-400 focus:outline-none   border border-gray-400 my-3 pl-3 pt-2 pb-2 "
+          className="rounded-l-full rounded-bl-full w-[250px] sm:w-[300px] md:w-[350px] lg:w-[450px] xl:[600px] h-[32px] border-r-0 focus:border-gray-400 focus:outline-none   border border-gray-400 my-3 pl-3 pt-2 pb-2 "
           placeholder="Search Videos, Shorts "
         />
         <button className="bg-gray-200 text-Black-500 p-1 border border-gray-400 rounded-r-full rounded-br-full h-[32px]  ">
@@ -39,11 +39,11 @@ const Header = () => {
           Search
         </button>
       </div>
-      <div>
+      <div className="float-right">
         <img
           alt="User"
           src="https://yt3.ggpht.com/a/AATXAJwmmdi72_pMDpjT-blDnWv-sAR5VWc_161MYA=s900-c-k-c0xffffffff-no-rj-mo"
-          className="h-[50px] w-[50px] p-1 mr-4 pt-2"
+          className="h-[50px] w-[50px] p-1 mr-4 pt-2 "
         />
       </div>
     </div>

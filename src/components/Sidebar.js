@@ -18,7 +18,8 @@ const Sidebar = () => {
 
   if (!isMenuOpen) return null;
   return (
-    <div className="w-62  text-lg bg-white shadow-md shadow-gray-500 h-auto p-2 ">
+    <div className="w-62  text-lg bg-white  h-auto p-2 ">
+      {/* shadow-md shadow-gray-500 */}
       <Link to={"/"}>
         <div className="flex flex-row p-2  hover:bg-slate-100 hover:rounded-xl">
           <MdHome className="h-[40px] w-[30px]" />
@@ -42,7 +43,7 @@ const Sidebar = () => {
         <h1 className="px-2 font-normal pr-8">Subscription</h1>
       </div>
 
-      <div className="border border-b-2 border-gray-400 mx-0 3-3 my-2"></div>
+      <div className="border border-b-1 border-gray-400 mx-0 3-3 my-2"></div>
       {/* <ul>
         {Subscriptions.map((items) => {
           return <li className="p-2 font-bold">{items}</li>;
@@ -56,7 +57,7 @@ const Sidebar = () => {
         <MdHistory className="h-[40px] w-[30px]" />
         <h1 className="px-2 py-1 font-normal">History</h1>
       </div>
-      <div className="border border-b-2 border-gray-400 mx-0 3-3 my-2 "></div>
+      <div className="border border-b-1 border-gray-400 mx-0 3-3 my-2 "></div>
       <h1 className="p-3 font-semibold text-xl">Explore</h1>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdTrendingUp className="h-[40px] w-[30px]" />
