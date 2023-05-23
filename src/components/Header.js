@@ -26,6 +26,7 @@ const Header = () => {
         console.log("data already in cache!!");
       } else {
         getSearchSuggestion();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }
     }, 200);
 
