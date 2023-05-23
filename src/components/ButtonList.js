@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 //import { useRef } from "react";
@@ -19,6 +20,10 @@ const buttonlist = [
   "React.js",
 ];
 const ButtonList = () => {
+  const buttonlistvisible = useSelector(
+    (state) => state.Menu.isButtonListVisible
+  );
+
   //const ref = useRef(null);
   const scroll = (scrollOffset) => {
     // ref.current.scrollLeft += scrollOffset;
@@ -26,13 +31,14 @@ const ButtonList = () => {
     slider.scrollLeft += scrollOffset;
   };
 
+  if (buttonlistvisible === false) return null;
   return (
     // <div className="flex overflow-x-scroll">
     //   {buttonlist.map((item, index) => {
     //     return <ButtonSort name={item} key={index} />;
     //   })}
     // </div> max-w-screen-2xl
-    <div className=" max-w-screen-lg  relative overflow-hidden border-2 border-gray-300  mt-3 m-auto rounded-lg">
+    <div className="relative max-w-[300px] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg   overflow-hidden   mt-3 m-auto rounded-lg ">
       <div className="absolute bg-white pl-2  top-0  flex items-center">
         <TfiArrowCircleLeft
           onClick={() => scroll(-200)}

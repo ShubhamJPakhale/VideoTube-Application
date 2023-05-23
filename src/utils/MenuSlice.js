@@ -4,6 +4,7 @@ const MenuSlice = createSlice({
   name: "Menu",
   initialState: {
     isMenuOpen: true,
+    isButtonListVisible: true,
   },
   reducers: {
     toggleMenu: (state) => {
@@ -12,8 +13,12 @@ const MenuSlice = createSlice({
     closeHambergerMenu: (state) => {
       state.isMenuOpen = false;
     },
+    hideButtonList: (state) => {
+      state.isButtonListVisible = !state.isButtonListVisible;
+    },
   },
 });
 
-export const { toggleMenu, closeHambergerMenu } = MenuSlice.actions;
+export const { toggleMenu, closeHambergerMenu, hideButtonList } =
+  MenuSlice.actions;
 export default MenuSlice.reducer;

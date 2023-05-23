@@ -5,9 +5,9 @@ const VideoCard = ({ videoinfo }) => {
   //const { statistics } = { videoinfo };
   //   const { title, thumbnails } = snippet;
   return (
-    <div className="flex flex-col h-auto w-[350px] p-2 m-2 shadow shadow-gray-100 hover:shadow-slate-300">
+    <div className="flex flex-col h-auto w-screen-min sm:w-[200px] md:w-[275px] lg:w-[350px] sm:p-2 sm:m-2 shadow shadow-gray-100 hover:shadow-slate-300">
       <img
-        className="rounded-xl m-1 h-52"
+        className="rounded-xl sm:m-1 h-52"
         src={videoinfo?.snippet?.thumbnails?.high?.url}
         alt="video"
       />

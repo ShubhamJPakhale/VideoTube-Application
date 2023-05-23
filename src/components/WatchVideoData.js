@@ -18,29 +18,29 @@ function WatchVideoData({ videoid }) {
     );
 
     const jsonvideodata = await videodata.json();
-    console.log(jsonvideodata);
+
     setVideodata(jsonvideodata.items[0]);
   };
 
   return (
     <div>
-      <h1 className="text-xl font-semibold pt-3 text-wrap ">
+      <h1 className="flex flex-row justify-between text-xl font-semibold pt-3 text-wrap ">
         {videodata?.snippet?.title}
       </h1>
-      <div className="ml-12 w-auto flex flex-row justify-between">
+      <div className="pt-2 w-auto flex flex-row justify-between">
         <h1 className="text-lg font-normal pt-1 text-wrap ">
           {videodata?.snippet?.channelTitle}
         </h1>{" "}
-        <button className="rounded-full pl-3 pr-3 pt-1 pb-1 bg-black text-white w-auto">
+        <button className="rounded-full text-lg px-2   hover:bg-black  bg-gray-800 text-white ">
           Subscribe
         </button>
-        <div className="flex flex-row">
-          <button className="p-2 ">
+        <div className="flex flex-row border-2 border-gray-400 rounded-lg mr-5 ">
+          <button className="p-2 flex flex-row pr-3 border-r-2 border-gray-400 hover:bg-slate-400">
             <AiOutlineLike className="h-[20px] w-[20px]" />
             {Math.round((videodata?.statistics?.likeCount / 1000) * 10) /
               10}K{" "}
           </button>
-          <button>
+          <button className="px-4 pr-4 hover:bg-slate-400">
             <AiOutlineDislike />
           </button>
         </div>

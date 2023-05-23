@@ -4,6 +4,7 @@ import { closeHambergerMenu } from "../utils/MenuSlice";
 import { useSearchParams } from "react-router-dom";
 
 import WatchVideoData from "./WatchVideoData";
+import Comments from "./Comments";
 
 const WatchVideo = () => {
   //const [value] = useState("value");
@@ -19,7 +20,7 @@ const WatchVideo = () => {
   }, []);
 
   return (
-    <div className="md:ml-12 md:my-5 flex flex-col w-auto lg:w-[760px]">
+    <div className="m-1 md:ml-12 md:my-5 flex flex-col w-auto lg:w-[760px]">
       <iframe
         src={"https://www.youtube.com/embed/" + term}
         title="YouTube video player"
@@ -30,6 +31,7 @@ const WatchVideo = () => {
       ></iframe>
 
       <WatchVideoData videoid={term} />
+      <Comments />
     </div>
   );
 };

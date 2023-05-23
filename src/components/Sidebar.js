@@ -18,12 +18,12 @@ const Sidebar = () => {
 
   if (!isMenuOpen) return null;
   return (
-    <div className="w-62  text-lg bg-white  h-auto p-2 ">
+    <div className=" sm:block w-auto sm:w-62  text-lg bg-white  h-auto p-2 ">
       {/* shadow-md shadow-gray-500 */}
       <Link to={"/"}>
         <div className="flex flex-row p-2  hover:bg-slate-100 hover:rounded-xl">
           <MdHome className="h-[40px] w-[30px]" />
-          <h1 className="px-2 py-1 font-normal">Home</h1>
+          <h1 className="hidden sm:block px-2 py-1 font-normal">Home</h1>
         </div>
       </Link>
       <div className="flex flex-row p-3 px-2 hover:bg-slate-100 hover:rounded-xl">
@@ -32,7 +32,7 @@ const Sidebar = () => {
           alt="shorts"
           className="h-[25px] w-[30px]"
         />
-        <h1 className="px-2 font-normal">Shorts</h1>
+        <h1 className="px-2 font-normal hidden sm:block">Shorts</h1>
       </div>
       <div className="flex flex-row p-3 px-2 hover:bg-slate-100 hover:rounded-xl">
         <img
@@ -40,7 +40,7 @@ const Sidebar = () => {
           alt="Subscription"
           className="h-[25px] w-[30px]"
         />
-        <h1 className="px-2 font-normal pr-8">Subscription</h1>
+        <h1 className="px-2 font-normal pr-8 hidden sm:block">Subscription</h1>
       </div>
 
       <div className="border border-b-1 border-gray-400 mx-0 3-3 my-2"></div>
@@ -51,29 +51,29 @@ const Sidebar = () => {
       </ul> */}
       <div className="flex flex-row p-2 py-3 hover:bg-slate-100 hover:rounded-xl">
         <MdVideoLibrary className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">Library</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">Library</h1>
       </div>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdHistory className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">History</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">History</h1>
       </div>
       <div className="border border-b-1 border-gray-400 mx-0 3-3 my-2 "></div>
-      <h1 className="p-3 font-semibold text-xl">Explore</h1>
+      <h1 className="p-3 font-semibold text-xl hidden sm:block">Explore</h1>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdTrendingUp className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">Trending</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">Trending</h1>
       </div>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdLibraryMusic className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">Music</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">Music</h1>
       </div>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdLocalMovies className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">Movies</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">Movies</h1>
       </div>
       <div className="flex flex-row p-2 hover:bg-slate-100 hover:rounded-xl">
         <MdNewspaper className="h-[40px] w-[30px]" />
-        <h1 className="px-2 py-1 font-normal">News</h1>
+        <h1 className="px-2 py-1 font-normal hidden sm:block">News</h1>
       </div>
     </div>
   );
