@@ -1,11 +1,6 @@
-<<<<<<< Updated upstream
-export const YouTube_API_Key = "";
-export const Youtube_API =
-=======
 export const ykey = process.env.REACT_APP_Secret_YKey;
 console.log(ykey);
 export const YApi =
->>>>>>> Stashed changes
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
   ykey;
 

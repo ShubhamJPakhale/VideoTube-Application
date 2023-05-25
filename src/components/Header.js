@@ -26,7 +26,6 @@ const Header = () => {
         console.log("data already in cache!!");
       } else {
         getSearchSuggestion();
-       
       }
     }, 200);
 
@@ -34,11 +33,7 @@ const Header = () => {
       clearTimeout(timeout);
       console.log("cleartimout called ");
     };
-<<<<<<< Updated upstream
-     // eslint-disable-next-line react-hooks/exhaustive-deps
-=======
     // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> Stashed changes
   }, [searchQuary]);
 
   //debounce function
