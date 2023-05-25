@@ -23,7 +23,7 @@ const Header = () => {
     const timeout = setTimeout(() => {
       if (searchcache[searchQuary]) {
         setSuggestionvalues(searchcache[searchQuary]);
-        console.log("data already in cache!!");
+      
       } else {
         getSearchSuggestion();
       }
@@ -31,20 +31,20 @@ const Header = () => {
 
     return () => {
       clearTimeout(timeout);
-      console.log("cleartimout called ");
+     
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchQuary]);
 
   //debounce function
   const getSearchSuggestion = async () => {
-    console.log("query = " + searchQuary);
+ 
     const suggestion = await fetch(VT_Search_suggestion_Api + searchQuary);
     const jsonsuggestion = await suggestion.json();
     setSuggestionvalues(jsonsuggestion[1]);
 
     dispatch(cacheResults({ [searchQuary]: jsonsuggestion[1] }));
-    console.log("api for suggestion = " + searchQuary + suggestionvalues);
+  
   };
 
   const toggleMenuHandler = () => {
