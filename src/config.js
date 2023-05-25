@@ -1,13 +1,19 @@
+<<<<<<< Updated upstream
 export const YouTube_API_Key = "";
 export const Youtube_API =
+=======
+export const ykey = process.env.REACT_APP_Secret_YKey;
+console.log(ykey);
+export const YApi =
+>>>>>>> Stashed changes
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=" +
-  YouTube_API_Key;
+  ykey;
 
 //maxResults=50 -> added in to youtube api for getting maximum 50 videos data by passing this as a query parameter
 
-export const Youtube_Video_Data =
+export const y_video_data =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=&key=" +
-  YouTube_API_Key;
+  ykey;
 
-export const VideoTube_Search_suggestion_Api =
+export const VT_Search_suggestion_Api =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

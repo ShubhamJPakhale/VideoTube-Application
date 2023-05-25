@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { YouTube_API_Key } from "../config";
+import { ykey } from "../config";
 import { AiOutlineLike, AiOutlineDislike } from "react-icons/ai";
 
 function WatchVideoData({ videoid }) {
@@ -14,7 +14,7 @@ function WatchVideoData({ videoid }) {
       "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=" +
         videoid +
         "&key=" +
-        YouTube_API_Key
+        ykey
     );
 
     const jsonvideodata = await videodata.json();

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Youtube_API } from "../config";
+import { YApi } from "../config";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const VideoContainer = () => {
   }, []);
 
   const getvideos = async () => {
-    const data = await fetch(Youtube_API);
+    const data = await fetch(YApi);
     const jsondata = await data.json();
 
     setYtVideos(jsondata?.items);
@@ -20,7 +20,7 @@ const VideoContainer = () => {
 
   return (
     <div className="flex flex-wrap m-3">
-      {ytvideos.map((videos) => (
+      {ytvideos?.map((videos) => (
         <Link to={"/watch?v=" + videos.id}>
           <VideoCard videoinfo={videos} key={videos.id} />
         </Link>

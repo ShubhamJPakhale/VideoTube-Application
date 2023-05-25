@@ -3,7 +3,7 @@ import { hideButtonList, toggleMenu } from "../utils/MenuSlice";
 import logo from "../videotube.png";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { VideoTube_Search_suggestion_Api } from "../config";
+import { VT_Search_suggestion_Api } from "../config";
 import { MdSearch } from "react-icons/md";
 import { cacheResults } from "../utils/SearchSlice";
 
@@ -34,15 +34,17 @@ const Header = () => {
       clearTimeout(timeout);
       console.log("cleartimout called ");
     };
+<<<<<<< Updated upstream
      // eslint-disable-next-line react-hooks/exhaustive-deps
+=======
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+>>>>>>> Stashed changes
   }, [searchQuary]);
 
   //debounce function
   const getSearchSuggestion = async () => {
     console.log("query = " + searchQuary);
-    const suggestion = await fetch(
-      VideoTube_Search_suggestion_Api + searchQuary
-    );
+    const suggestion = await fetch(VT_Search_suggestion_Api + searchQuary);
     const jsonsuggestion = await suggestion.json();
     setSuggestionvalues(jsonsuggestion[1]);
 

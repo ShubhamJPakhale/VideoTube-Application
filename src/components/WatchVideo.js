@@ -4,7 +4,8 @@ import { closeHambergerMenu } from "../utils/MenuSlice";
 import { useSearchParams } from "react-router-dom";
 
 import WatchVideoData from "./WatchVideoData";
-import Comments from "./Comments";
+
+import Commentcontainer from "./Commentcontainer";
 
 const WatchVideo = () => {
   //const [value] = useState("value");
@@ -31,7 +32,7 @@ const WatchVideo = () => {
       ></iframe>
 
       <WatchVideoData videoid={term} />
-      <Comments />
+      <Commentcontainer />
     </div>
   );
 };
